@@ -24,6 +24,7 @@ function objToSql(ob) {
 }
 
 var orm = {
+	//this will query table info from db
 	selectAll: function (table, cb) {
 		var queryString = 'SELECT * FROM ' + table + ';';
 		connection.query(queryString, function (err, result) {
@@ -31,6 +32,7 @@ var orm = {
 			cb(result);
 		});
 	},
+	//this allows the user to add data to db
 	insertOne: function (table, cols, vals, cb) {
 		var queryString = 'INSERT INTO ' + table;
 
@@ -48,6 +50,7 @@ var orm = {
 			cb(result);
 		});
 	},
+	//this allows the data to be updated
 	updateOne: function (table, objColVals, condition, cb) {
 		var queryString = 'UPDATE ' + table;
 

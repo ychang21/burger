@@ -1,4 +1,5 @@
 //connection to database and export to be used for orm
+//this was adjusted from the original to include jaws
 var mysql = require('mysql');
 var connection;
 
